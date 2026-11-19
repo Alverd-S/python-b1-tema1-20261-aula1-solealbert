@@ -41,8 +41,27 @@ Exemple:
 
 def fibonacci(fibonacci_number):
     # Write here your code
+    try:
+
+        a = 0
+        b = 1
+
+        if fibonacci_number >= 0: 
+
+            for number in range(fibonacci_number):
+                c = a+b
+                a = b
+                b = c
+
+            return a
+        else:
+            return "El paràmetre de la funció ha de ser un nombre vàlid"
+    
+    except TypeError:
+        return "El paràmetre de la funció ha de ser un nombre vàlid"
+    
     pass
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(fibonacci(10))
+print(fibonacci(10))
